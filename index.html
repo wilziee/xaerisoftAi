@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Xaerisoft AI - by WillXD</title>
+    <meta name="description" content="Modern AI Chatbot powered by WillXD">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Highlight.js Theme (Atom One Dark) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Layers -->
+    <div class="background-aurora"></div>
+    <div class="background-noise"></div>
+    <canvas id="star-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- App Container -->
+    <div class="app-container">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button id="new-chat-btn" class="btn-primary">
+                    <i class="fa-solid fa-plus"></i> New Chat
+                </button>
+                <button id="close-sidebar" class="icon-btn mobile-only">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div class="chat-history-list" id="chat-history-list">
+                <!-- History items will be generated here -->
+            </div>
+
+            <div class="sidebar-footer">
+                <button id="export-btn" class="btn-secondary">
+                    <i class="fa-solid fa-download"></i> Export
+                </button>
+                <button id="import-btn" class="btn-secondary">
+                    <i class="fa-solid fa-upload"></i> Import
+                </button>
+                <input type="file" id="import-file" accept=".json" style="display: none;">
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <!-- Navbar -->
+            <nav class="navbar">
+                <div class="nav-left">
+                    <button id="toggle-sidebar" class="icon-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="brand">
+                        <h1>Xaerisoft AI</h1>
+                        <span class="subtitle">Powered by WillXD</span>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <button id="clear-current-chat" class="icon-btn" title="Delete Chat">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Chat Area -->
+            <div class="chat-container" id="chat-container">
+                <div class="welcome-screen" id="welcome-screen">
+                    <div class="glow-icon">✨</div>
+                    <h2>Welcome to Xaerisoft Universe</h2>
+                    <p>Ask me anything. I'm ready to help you build the future.</p>
+                </div>
+                <!-- Chat Bubbles will be appended here -->
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea id="chat-input" placeholder="Ketik pesanmu di sini..." rows="1"></textarea>
+                    <button id="send-btn" class="send-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+                <!-- Footer -->
+                <footer class="footer">
+                    Xaerisoft AI • Created by WillXD • Copyright &copy; 2026 WillXD • All Rights Reserved.
+                </footer>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
