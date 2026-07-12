@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xaerisoft AI </title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/tokyo-night-dark.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div id="cursor-glow"></div>
+    <div class="aurora-container">
+        <div class="aurora-item"></div>
+        <div class="aurora-item"></div>
+        <div class="aurora-item"></div>
+    </div>
+
+    <div class="app-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-blur"></div>
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-atom"></i>
+                    </div>
+                    <h2>Xaerisoft AI Beta</h2>
+                </div>
+                <button id="close-sidebar" class="mobile-only"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <button id="new-chat-btn" class="premium-btn">
+                <i class="fa-solid fa-plus"></i> <span>New Chat</span>
+            </button>
+            
+            <div class="chat-history-container">
+                <p class="section-label">Memory Core</p>
+                <ul id="chat-history-list"></ul>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="tool-row">
+                    <button id="export-btn" class="icon-tool"><i class="fa-solid fa-download"></i></button>
+                    <button id="import-btn" class="icon-tool" onclick="document.getElementById('import-file').click()"><i class="fa-solid fa-upload"></i></button>
+                </div>
+                <input type="file" id="import-file" accept=".json" style="display: none;">
+                <div class="branding">
+                    <p class="copyright">© 2026 Xaerisoft Universe</p>
+                    <p class="creator">Crafted by <span>WillXD</span></p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="chat-area">
+            <nav class="navbar" id="navbar">
+                <div class="nav-left">
+                    <button id="toggle-sidebar"><i class="fa-solid fa-bars-staggered"></i></button>
+                    <div class="model-badge">
+                        <span class="status-dot"></span>
+                        <p>Xaerisoft Ai Beta</p>
+                    </div>
+                </div>
+                <div class="nav-center">
+                    <span class="nav-title">Xaerisoft AI Beta</span>
+                </div>
+                <div class="nav-right">
+                    <div class="powered-label">GROQ ENGINE</div>
+                </div>
+            </nav>
+
+            <div class="chat-box" id="chat-box">
+                <div class="welcome-screen" id="welcome-screen">
+                    <div class="welcome-glow"></div>
+                    <div class="icon-container">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                    </div>
+                    <h2>Xaerisoft AI</h2>
+                    <p class="subtitle">tes.</p>
+                    <div class="suggestion-grid">
+                        <div class="suggest-card" onclick="setQuickInput('Bikin kode python buat visualisasi data dong!')">
+                            <i class="fa-brands fa-python"></i>
+                            <span>Python Wizard</span>
+                        </div>
+                        <div class="suggest-card" onclick="setQuickInput('Kasih roasting tipis buat programmer JavaScript!')">
+                            <i class="fa-solid fa-fire"></i>
+                            <span>Roast Mode</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <div class="input-glass">
+                        <textarea id="chat-input" placeholder="Initiate neural link..." rows="1"></textarea>
+                        <div class="input-actions">
+                            <button id="send-btn">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="bottom-disclaimer">Xaerisoft AI is an experimental project by WillXD.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.0.3/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
